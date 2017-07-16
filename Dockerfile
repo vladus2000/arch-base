@@ -1,6 +1,8 @@
 FROM archimg/base
 MAINTAINER vladus2000 <docker@matt.land>
 
+COPY shiz/ /
+
 RUN \
 	pacman -Syyu --noconfirm && \
 	pacman -S --needed --noconfirm vim bash-completion wget rsync unzip unrar p7zip zip openssh && \
@@ -18,6 +20,7 @@ RUN \
 	echo alias 'lrta="ls -lrta"' >> /etc/bash.bashrc && \
 	echo alias 'netstat="ss"' >> /etc/bash.bashrc && \
 	echo alias 'p="pgrep -af "' >> /etc/bash.bashrc && \
+	chmod +x /*.sh && \
 	rm -rf /var/cache/pacman/pkg/* /var/lib/pacman/sync/*
 
 CMD ["/bin/bash"]
