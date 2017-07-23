@@ -5,7 +5,7 @@ COPY shiz/ /
 
 RUN \
 	pacman -Syyu --noconfirm && \
-	pacman -S --needed --noconfirm vim bash-completion wget rsync unzip unrar p7zip zip openssh && \
+	pacman -S --needed --noconfirm vim bash-completion && \
 	ln -sf /usr/bin/vim /usr/bin/vi && \
 	ln -sf /usr/bin/vim /usr/bin/edit && \
 	ln -sf /usr/bin/vim /usr/bin/ex && \
