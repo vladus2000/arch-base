@@ -1,1 +1,1 @@
-# arch-yaourt-evil-base
+# arch-base
