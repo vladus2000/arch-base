@@ -1,7 +1,7 @@
 # grab things necessary to make debugging containers easier
 
 pacman -Syyu --noconfirm
-pacman -S --needed --noconfirm vim bash-completion
+pacman -S --needed --noconfirm vim bash-completion iproute2
 ln -sf /usr/bin/vim /usr/bin/vi
 ln -sf /usr/bin/vim /usr/bin/edit
 ln -sf /usr/bin/vim /usr/bin/ex

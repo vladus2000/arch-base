@@ -17,4 +17,5 @@ RUN \
 	chmod +x /*.sh && \
 	rm -rf /var/cache/pacman/pkg/* /var/lib/pacman/sync/*
 
-CMD ["/bin/bash"]
+CMD /bin/bash -c /startup.sh
+
