@@ -5,6 +5,7 @@ COPY shiz/ /
 
 RUN \
 	pacman -Syyu --noconfirm && \
+	pacman -S --noconfirm audit && \
 	echo alias 'cd..="cd .."' >> /etc/bash.bashrc && \
 	echo alias 'l="ls -CF"' >> /etc/bash.bashrc && \
 	echo alias 'la="ls -A"' >> /etc/bash.bashrc && \
