@@ -4,7 +4,7 @@ MAINTAINER vladus2000 <docker@matt.land>
 COPY shiz/ /
 
 RUN \
-	pacman -Syyu --noconfirm --needed audit diffutils file gawk which && \
+	pacman -Syyu --noconfirm --needed audit && \
 	echo alias 'cd..="cd .."' >> /etc/bash.bashrc && \
 	echo alias 'l="ls -CF"' >> /etc/bash.bashrc && \
 	echo alias 'la="ls -A"' >> /etc/bash.bashrc && \

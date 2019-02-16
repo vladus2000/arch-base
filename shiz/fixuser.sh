@@ -1,3 +1,13 @@
+if [[ -z "${PUID}" ]]; then
+	if [[ ! -z "$2" ]]; then
+		export PUID=$(id -u $2)
+	fi
+fi
+if [[ -z "${PGID}" ]]; then
+	if [[ ! -z "$2" ]]; then
+		export PGID=$(id -g $2)
+	fi
+fi
 if [[ ! -z "${PUID}" ]]; then
 	export runcmd=echo
 	export old_id=$(id -u $1)
