@@ -4,8 +4,7 @@ MAINTAINER vladus2000 <docker@matt.land>
 COPY shiz/ /
 
 RUN \
-	pacman -Syyu --noconfirm --needed base audit && \
-	pacman -Rsc --noconfirm cryptsetup device-mapper dhcpcd iproute2 jfsutils linux lvm2 man-db man-pages mdadm nano netctl openresolv pciutils reiserfsprogs s-nail systemd-sysvcompat usbutils vi xfsprogs && \
+	pacman -Syyu --noconfirm --needed audit diffutils file gawk which && \
 	echo alias 'cd..="cd .."' >> /etc/bash.bashrc && \
 	echo alias 'l="ls -CF"' >> /etc/bash.bashrc && \
 	echo alias 'la="ls -A"' >> /etc/bash.bashrc && \
