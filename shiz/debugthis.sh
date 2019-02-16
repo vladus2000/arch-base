@@ -1,6 +1,6 @@
 # grab things necessary to make debugging containers easier
 
-pacman -Syyu --noconfirm --needed vim bash-completion procps-ng diffutils which grep iproute2 wget
+pacman -Syyu --noconfirm --needed vim bash-completion procps-ng diffutils which grep iproute2 wget inetutils binutils moreutils psmisc
 ln -sf /usr/bin/vim /usr/bin/vi
 ln -sf /usr/bin/vim /usr/bin/edit
 ln -sf /usr/bin/vim /usr/bin/ex
