@@ -1,4 +1,4 @@
-FROM archlinux/base
+FROM archlinux:base
 MAINTAINER vladus2000 <docker@matt.land>
 
 COPY shiz/ /
